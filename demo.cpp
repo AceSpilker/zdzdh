@@ -1,29 +1,27 @@
 #include<stdio.h>
-
 int MaxNum2(int* arr, int len)
 {
-	int max = 0;//0x8000 0000是十六进制的最小值
+	int max = 0;
 	int sum = 0;
 	int i;
 	for (i = 0; i < len; i++)
 	{
 		if (sum <= 0)
 		{
-			sum = arr[i];//当sum<=0时，将第i个指向值给sum
+			sum = arr[i];
 		}
 		else
 		{
-			sum += arr[i];//否则sum+下个指向值
+			sum += arr[i];
 		}
 
-		if (sum > max)//当此sum比上个sum大时，赋值给max
+		if (sum > max)
 		{
 			max = sum;
 		}
 	}
 	return max;
 }
-
 int main()
 {
 	int arr[6] = { -2,11,-4,13,-5,-2 };
