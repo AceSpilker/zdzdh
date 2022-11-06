@@ -1,23 +1,22 @@
 #include<stdio.h>
 
-//Á¬Ğø×ÓÊı×éµÄ×î´óºÍ
 int MaxNum2(int* arr, int len)
 {
-	int max = 0;//0x8000 0000ÊÇÊ®Áù½øÖÆµÄ×îĞ¡Öµ
+	int max = 0;//0x8000 0000æ˜¯åå…­è¿›åˆ¶çš„æœ€å°å€¼
 	int sum = 0;
 	int i;
 	for (i = 0; i < len; i++)
 	{
 		if (sum <= 0)
 		{
-			sum = arr[i];//µ±sum<=0Ê±£¬½«µÚi¸öÖ¸ÏòÖµ¸øsum
+			sum = arr[i];//å½“sum<=0æ—¶ï¼Œå°†ç¬¬iä¸ªæŒ‡å‘å€¼ç»™sum
 		}
 		else
 		{
-			sum += arr[i];//·ñÔòsum+ÏÂ¸öÖ¸ÏòÖµ
+			sum += arr[i];//å¦åˆ™sum+ä¸‹ä¸ªæŒ‡å‘å€¼
 		}
 
-		if (sum > max)//µ±´Ësum±ÈÉÏ¸ösum´óÊ±£¬¸³Öµ¸ømax
+		if (sum > max)//å½“æ­¤sumæ¯”ä¸Šä¸ªsumå¤§æ—¶ï¼Œèµ‹å€¼ç»™max
 		{
 			max = sum;
 		}
